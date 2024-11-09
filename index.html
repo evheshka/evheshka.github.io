@@ -15,20 +15,24 @@
             align-items: center;
         }
 
+        /* Стиль для кнопки с градиентом и 3D-эффектом */
         .cta-button {
-            background-color: #007bff;
+            background: linear-gradient(145deg, #f7a600, #ffcc00);
             color: #fff;
             padding: 15px 30px;
             border: none;
-            border-radius: 8px;
+            border-radius: 12px;
             font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(255, 255, 255, 0.4);
             cursor: pointer;
             margin-top: 20px;
-            transition: background-color 0.2s;
+            transition: background 0.3s, box-shadow 0.3s;
         }
 
         .cta-button:hover {
-            background-color: #0056b3;
+            background: linear-gradient(145deg, #ffa500, #ffdb4d);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4), inset 0px -1px 0px rgba(255, 255, 255, 0.2);
         }
 
         .section-title {
@@ -75,32 +79,35 @@
             border-radius: 5px;
             font-size: 14px;
             cursor: pointer;
-        }
-
-        .btn-free {
-            background-color: #007bff;
+            font-weight: bold;
+            background: linear-gradient(145deg, #f7a600, #ffcc00);
             color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(255, 255, 255, 0.4);
+            transition: background 0.3s, box-shadow 0.3s;
         }
 
-        .btn-limited {
-            background-color: #333;
-            color: #999;
+        .btn-group .btn:hover {
+            background: linear-gradient(145deg, #ffa500, #ffdb4d);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4), inset 0px -1px 0px rgba(255, 255, 255, 0.2);
         }
 
         .reserve-button {
-            background-color: #007bff;
+            background: linear-gradient(145deg, #f7a600, #ffcc00);
             color: #fff;
             padding: 10px 20px;
-            border-radius: 8px;
+            border-radius: 12px;
             font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
             width: 100%;
             border: none;
-            transition: background-color 0.2s;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(255, 255, 255, 0.4);
+            transition: background 0.3s, box-shadow 0.3s;
         }
 
         .reserve-button:hover {
-            background-color: #0056b3;
+            background: linear-gradient(145deg, #ffa500, #ffdb4d);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4), inset 0px -1px 0px rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
@@ -119,8 +126,8 @@
         <h2 class="offer-title">Эксклюзивные условия</h2>
         <p class="offer-details">Настоящие подписчики и просмотры без риска блокировки аккаунта!</p>
         <div class="btn-group">
-            <div class="btn btn-free">Бесплатно</div>
-            <div class="btn btn-limited">Места ограничены</div>
+            <div class="btn">Бесплатно</div>
+            <div class="btn">Места ограничены</div>
         </div>
         <button class="reserve-button">Забронировать место</button>
     </div>
@@ -132,8 +139,8 @@
             <h2 class="offer-title">500 подписчиков Instagram</h2>
             <p class="offer-details">Повышение охвата и активности для вашего аккаунта.</p>
             <div class="btn-group">
-                <div class="btn btn-free">69 грн</div>
-                <div class="btn btn-limited">Было 89 грн</div>
+                <div class="btn">69 грн</div>
+                <div class="btn">Было 89 грн</div>
             </div>
             <button class="reserve-button">Заказать сейчас</button>
         </div>
@@ -143,8 +150,8 @@
             <h2 class="offer-title">1000 просмотров Telegram</h2>
             <p class="offer-details">Увеличение видимости ваших публикаций в канале.</p>
             <div class="btn-group">
-                <div class="btn btn-free">49 грн</div>
-                <div class="btn btn-limited">Было 59 грн</div>
+                <div class="btn">49 грн</div>
+                <div class="btn">Было 59 грн</div>
             </div>
             <button class="reserve-button">Заказать сейчас</button>
         </div>

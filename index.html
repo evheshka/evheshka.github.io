@@ -3,209 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoostPro - Продвижение в Соцсетях</title>
+    <title>Exclusive Event</title>
     <style>
         body {
+            background-color: #0d0d0d;
+            color: #fff;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin: 0;
             padding: 0;
-            color: #333;
         }
-        /* Основной стиль */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .hero {
-            background-color: #f8f8f8;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 36px;
-            color: #333;
-        }
-        .hero p {
-            font-size: 18px;
-            color: #666;
-        }
-        .hero .cta-button {
-            background-color: #28a745;
+        .cta-button {
+            background-color: #007bff;
             color: #fff;
             padding: 15px 30px;
             border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        .advantages, .services, .faq, .contact, .order-form {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .advantages h2, .services h2, .faq h2, .contact h2, .order-form h2 {
-            color: #333;
-        }
-        .advantages .advantage, .services .service-card, .faq .faq-item {
-            display: inline-block;
-            width: 22%;
-            margin: 1%;
-            padding: 20px;
-            background-color: #f8f8f8;
             border-radius: 8px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .section-title {
+            font-size: 36px;
+            margin: 40px 0 20px;
             text-align: center;
         }
-        .advantages .icon, .services .icon {
-            font-size: 40px;
+        .offer-card {
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            margin: 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .offer-card img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        .offer-title {
+            font-size: 24px;
             margin-bottom: 10px;
         }
-        .service-card .price {
-            color: #e63946;
-            font-size: 24px;
-            margin: 10px 0;
+        .offer-details {
+            color: #ccc;
+            font-size: 14px;
+            margin-bottom: 20px;
         }
-        .service-card .price span {
-            text-decoration: line-through;
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .btn-group .btn {
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .btn-free {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .btn-limited {
+            background-color: #333;
             color: #999;
-            font-size: 18px;
         }
-        .service-card button {
-            background-color: #28a745;
+        .reserve-button {
+            background-color: #007bff;
             color: #fff;
             padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .faq-item {
-            text-align: left;
-            margin: 10px;
-            font-size: 18px;
-        }
-        .contact .icons a {
-            font-size: 24px;
-            color: #28a745;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        /* Форма заказа */
-        .order-form form {
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        .order-form label {
-            display: block;
-            margin-top: 10px;
-        }
-        .order-form input, .order-form select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .order-form button {
-            background-color: #28a745;
-            color: #fff;
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-size: 16px;
             cursor: pointer;
             width: 100%;
-            font-size: 18px;
-            margin-top: 20px;
+            border: none;
         }
     </style>
 </head>
 <body>
 
-    <!-- Заголовок -->
-    <section class="hero">
-        <h1>Прокачай свой Instagram и Telegram быстро и безопасно!</h1>
-        <p>Живая аудитория, мгновенный старт и доступные цены для твоего роста!</p>
-        <button class="cta-button">Начать продвижение</button>
-    </section>
+    <!-- CTA Button -->
+    <button class="cta-button">Принять участие</button>
+    <p style="color: #666; font-size: 14px;">Это бесплатно, но мест немного</p>
 
-    <!-- Преимущества -->
-    <section class="advantages container">
-        <h2>Наши Преимущества</h2>
-        <div class="advantage">
-            <div class="icon">🏆</div>
-            <h3>Высокое качество</h3>
-            <p>Настоящие люди, никакого бот-продвижения и риска блокировки!</p>
-        </div>
-        <div class="advantage">
-            <div class="icon">🚀</div>
-            <h3>Мгновенный запуск</h3>
-            <p>Начало продвижения в течение 5 минут после оформления заказа.</p>
-        </div>
-        <div class="advantage">
-            <div class="icon">🔒</div>
-            <h3>Полная конфиденциальность</h3>
-            <p>Никаких паролей и лишней информации — только ссылку на аккаунт.</p>
-        </div>
-        <div class="advantage">
-            <div class="icon">💬</div>
-            <h3>Поддержка 24/7</h3>
-            <p>Наши менеджеры всегда готовы помочь вам в любое время.</p>
-        </div>
-    </section>
+    <!-- Title Section -->
+    <h1 class="section-title">Преимущество для гостей премьеры</h1>
 
-    <!-- Услуги -->
-    <section class="services container">
-        <h2>Наши Услуги</h2>
-
-        <!-- Instagram Подписчики -->
-        <div class="service-card">
-            <div class="icon">📈</div>
-            <h3>500 подписчиков Instagram</h3>
-            <div class="price"><span>89 грн</span> 69 грн</div>
-            <button>Заказать сейчас</button>
+    <!-- Exclusive Offer Card -->
+    <div class="offer-card">
+        <img src="gift_icon.png" alt="Gift Icon">
+        <h2 class="offer-title">Эксклюзивные условия</h2>
+        <p class="offer-details">Использование Tomoru.Team только для гостей Премьеры</p>
+        <div class="btn-group">
+            <div class="btn btn-free">Бесплатно</div>
+            <div class="btn btn-limited">Места ограничены</div>
         </div>
+        <button class="reserve-button">Забронировать место</button>
+    </div>
 
-        <div class="service-card">
-            <div class="icon">📈</div>
-            <h3>1000 подписчиков Instagram</h3>
-            <div class="price"><span>159 грн</span> 129 грн</div>
-            <button>Заказать сейчас</button>
-        </div>
-
-        <!-- Telegram Просмотры -->
-        <div class="service-card">
-            <div class="icon">👀</div>
-            <h3>500 просмотров Telegram</h3>
-            <div class="price"><span>39 грн</span> 29 грн</div>
-            <button>Заказать сейчас</button>
-        </div>
-
-        <div class="service-card">
-            <div class="icon">👀</div>
-            <h3>1000 просмотров Telegram</h3>
-            <div class="price"><span>59 грн</span> 49 грн</div>
-            <button>Заказать сейчас</button>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq container">
-        <h2>Часто задаваемые вопросы</h2>
-        <div class="faq-item">
-            <h3>Нужен ли пароль от моего аккаунта?</h3>
-            <p>Нет, мы не запрашиваем и не нуждаемся в вашем пароле. Достаточно ссылки на аккаунт.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Как скоро начнется продвижение?</h3>
-            <p>Запуск обычно происходит в течение 5 минут после оплаты.</p>
-        </div>
-    </section>
-
-    <!-- Форма заказа -->
-    <section class="order-form container">
-        <h2>Оформить заказ</h2>
-        <form>
-            <label for="name">Имя</label>
-            <input type="text" id="name" required>
-            <label for="email">Email</label>
-            <i
+</body>
+</html>

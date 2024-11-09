@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exclusive Event</title>
+    <title>BoostPro - Продвижение в Соцсетях</title>
     <style>
         body {
             background-color: #0d0d0d;
-            color: #fff;
+            color: #ffffff;
             font-family: Arial, sans-serif;
+            margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 0;
-            padding: 0;
         }
+
         .cta-button {
             background-color: #007bff;
             color: #fff;
@@ -22,17 +22,21 @@
             border: none;
             border-radius: 8px;
             font-size: 18px;
-            margin-top: 20px;
             cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.2s;
         }
+
         .cta-button:hover {
             background-color: #0056b3;
         }
+
         .section-title {
             font-size: 36px;
             margin: 40px 0 20px;
             text-align: center;
         }
+
         .offer-card {
             background-color: #1a1a1a;
             border-radius: 15px;
@@ -42,39 +46,47 @@
             margin: 20px;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
         }
+
         .offer-card img {
             width: 80px;
             margin-bottom: 15px;
         }
+
         .offer-title {
             font-size: 24px;
             margin-bottom: 10px;
         }
+
         .offer-details {
             color: #ccc;
             font-size: 14px;
             margin-bottom: 20px;
         }
+
         .btn-group {
             display: flex;
             gap: 10px;
             justify-content: center;
             margin-bottom: 15px;
         }
+
         .btn-group .btn {
             padding: 8px 15px;
             border-radius: 5px;
             font-size: 14px;
             cursor: pointer;
         }
+
         .btn-free {
             background-color: #007bff;
             color: #fff;
         }
+
         .btn-limited {
             background-color: #333;
             color: #999;
         }
+
         .reserve-button {
             background-color: #007bff;
             color: #fff;
@@ -84,6 +96,11 @@
             cursor: pointer;
             width: 100%;
             border: none;
+            transition: background-color 0.2s;
+        }
+
+        .reserve-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -94,19 +111,44 @@
     <p style="color: #666; font-size: 14px;">Это бесплатно, но мест немного</p>
 
     <!-- Title Section -->
-    <h1 class="section-title">Преимущество для гостей премьеры</h1>
+    <h1 class="section-title">Преимущества продвижения в соцсетях</h1>
 
     <!-- Exclusive Offer Card -->
     <div class="offer-card">
         <img src="gift_icon.png" alt="Gift Icon">
         <h2 class="offer-title">Эксклюзивные условия</h2>
-        <p class="offer-details">Использование Tomoru.Team только для гостей Премьеры</p>
+        <p class="offer-details">Настоящие подписчики и просмотры без риска блокировки аккаунта!</p>
         <div class="btn-group">
             <div class="btn btn-free">Бесплатно</div>
             <div class="btn btn-limited">Места ограничены</div>
         </div>
         <button class="reserve-button">Забронировать место</button>
     </div>
+
+    <!-- Services Cards -->
+    <section class="services">
+        <div class="offer-card">
+            <img src="instagram_icon.png" alt="Instagram Icon">
+            <h2 class="offer-title">500 подписчиков Instagram</h2>
+            <p class="offer-details">Повышение охвата и активности для вашего аккаунта.</p>
+            <div class="btn-group">
+                <div class="btn btn-free">69 грн</div>
+                <div class="btn btn-limited">Было 89 грн</div>
+            </div>
+            <button class="reserve-button">Заказать сейчас</button>
+        </div>
+
+        <div class="offer-card">
+            <img src="telegram_icon.png" alt="Telegram Icon">
+            <h2 class="offer-title">1000 просмотров Telegram</h2>
+            <p class="offer-details">Увеличение видимости ваших публикаций в канале.</p>
+            <div class="btn-group">
+                <div class="btn btn-free">49 грн</div>
+                <div class="btn btn-limited">Было 59 грн</div>
+            </div>
+            <button class="reserve-button">Заказать сейчас</button>
+        </div>
+    </section>
 
 </body>
 </html>

@@ -3,159 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoostPro - Продвижение в Соцсетях</title>
-    <style>
-        body {
-            background-color: #0d0d0d;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+    <title>Покупка через Monobank</title>
+    <script>
+        async function handlePurchase() {
+            try {
+                const response = await fetch('/buy', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        accountId: '0',  // ID счета, который используется для оплаты
+                        amount: 50000    // Сумма в минимальных единицах валюты (например, 50000 копеек = 500 грн)
+                    })
+                });
+                const data = await response.json();
+                if (data.status === 'success') {
+                    alert('Покупка успешно завершена!');
+                } else {
+                    alert('Ошибка при выполнении покупки: ' + data.message);
+                }
+            } catch (error) {
+                console.error('Ошибка при выполнении покупки:', error);
+                alert('Произошла ошибка при оплате.');
+            }
         }
-
-        /* Стиль для кнопки с градиентом и 3D-эффектом */
-        .cta-button {
-            background: linear-gradient(145deg, #f7a600, #ffcc00);
-            color: #fff;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: bold;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(255, 255, 255, 0.4);
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background 0.3s, box-shadow 0.3s;
-        }
-
-        .cta-button:hover {
-            background: linear-gradient(145deg, #ffa500, #ffdb4d);
-            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4), inset 0px -1px 0px rgba(255, 255, 255, 0.2);
-        }
-
-        .section-title {
-            font-size: 36px;
-            margin: 40px 0 20px;
-            text-align: center;
-        }
-
-        .offer-card {
-            background-color: #1a1a1a;
-            border-radius: 15px;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            margin: 20px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .offer-card img {
-            width: 80px;
-            margin-bottom: 15px;
-        }
-
-        .offer-title {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .offer-details {
-            color: #ccc;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 15px;
-        }
-
-        .btn-group .btn {
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 14px;
-            cursor: pointer;
-            font-weight: bold;
-            background: linear-gradient(145deg, #f7a600, #ffcc00);
-            color: #fff;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(255, 255, 255, 0.4);
-            transition: background 0.3s, box-shadow 0.3s;
-        }
-
-        .btn-group .btn:hover {
-            background: linear-gradient(145deg, #ffa500, #ffdb4d);
-            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4), inset 0px -1px 0px rgba(255, 255, 255, 0.2);
-        }
-
-        .reserve-button {
-            background: linear-gradient(145deg, #f7a600, #ffcc00);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            border: none;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(255, 255, 255, 0.4);
-            transition: background 0.3s, box-shadow 0.3s;
-        }
-
-        .reserve-button:hover {
-            background: linear-gradient(145deg, #ffa500, #ffdb4d);
-            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4), inset 0px -1px 0px rgba(255, 255, 255, 0.2);
-        }
-    </style>
+    </script>
 </head>
 <body>
-
-    <!-- CTA Button -->
-    <button class="cta-button">Принять участие</button>
-    <p style="color: #666; font-size: 14px;">Это бесплатно, но мест немного</p>
-
-    <!-- Title Section -->
-    <h1 class="section-title">Преимущества продвижения в соцсетях</h1>
-
-    <!-- Exclusive Offer Card -->
-    <div class="offer-card">
-        <img src="gift_icon.png" alt="Gift Icon">
-        <h2 class="offer-title">Эксклюзивные условия</h2>
-        <p class="offer-details">Настоящие подписчики и просмотры без риска блокировки аккаунта!</p>
-        <div class="btn-group">
-            <div class="btn">Бесплатно</div>
-            <div class="btn">Места ограничены</div>
-        </div>
-        <button class="reserve-button">Забронировать место</button>
-    </div>
-
-    <!-- Services Cards -->
-    <section class="services">
-        <div class="offer-card">
-            <img src="instagram_icon.png" alt="Instagram Icon">
-            <h2 class="offer-title">500 подписчиков Instagram</h2>
-            <p class="offer-details">Повышение охвата и активности для вашего аккаунта.</p>
-            <div class="btn-group">
-                <div class="btn">69 грн</div>
-                <div class="btn">Было 89 грн</div>
-            </div>
-            <button class="reserve-button">Заказать сейчас</button>
-        </div>
-
-        <div class="offer-card">
-            <img src="telegram_icon.png" alt="Telegram Icon">
-            <h2 class="offer-title">1000 просмотров Telegram</h2>
-            <p class="offer-details">Увеличение видимости ваших публикаций в канале.</p>
-            <div class="btn-group">
-                <div class="btn">49 грн</div>
-                <div class="btn">Было 59 грн</div>
-            </div>
-            <button class="reserve-button">Заказать сейчас</button>
-        </div>
-    </section>
-
+    <h1>Оформление покупки через Monobank</h1>
+    <button onclick="handlePurchase()">Купить</button>
 </body>
 </html>
